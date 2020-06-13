@@ -34,11 +34,9 @@ average = (sum(my_list) / len(my_list))
 if new_deaths > average:
     print('This is  higher than the global average')
 
-elif new_deaths < 200:
+elif new_deaths < average:
     print('This is lower than the global average')
 
-else new_deaths = 200:
-    print('This is the the global average')
 
 # Find a country's cases of recovery
 #country_selection1 = input ('How many new confirmed cases? (type  in a country) ')
