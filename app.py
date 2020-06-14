@@ -14,14 +14,17 @@ def result():
     covid_19 = r.json()
     countries = covid_19.get('Countries')
     number_of_cases = 0
+    total_deaths = 0
     total_recovered = 0
+
     for country in countries:
         if country.get('Country').lower() == location:
             number_of_cases = country.get('NewConfirmed')
+            total_deaths = country.get('TotalDeaths')
             total_recovered = country.get('TotalRecovered')
             break
 
-    return render_template('result.html', cases=number_of_cases, recovered=total_recovered)
+    return render_template('result.html', cases=number_of_cases, deaths=total_deaths, recovered=total_recovered)
 
 
 @app.route('/')
