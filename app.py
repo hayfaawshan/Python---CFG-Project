@@ -19,7 +19,7 @@ def result():
 
     for country in countries:
         if country.get('Country').lower() == location:
-            number_of_cases = country.get('NewConfirmed')
+            number_of_cases = country.get('TotalConfirmed')
             total_deaths = country.get('TotalDeaths')
             total_recovered = country.get('TotalRecovered')
             break
