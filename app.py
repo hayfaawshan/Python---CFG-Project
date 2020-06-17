@@ -24,7 +24,9 @@ def result():
             total_recovered = country.get('TotalRecovered')
             break
 
-    return render_template('result.html', cases=number_of_cases, deaths=total_deaths, recovered=total_recovered)
+
+    return render_template('result.html', cases=number_of_cases, deaths=total_deaths, recovered=total_recovered, location=location)
+
 
 
 @app.route('/')
