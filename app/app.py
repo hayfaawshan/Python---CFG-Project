@@ -7,7 +7,7 @@ import json
 app = Flask(__name__)
 
 
-@app.route('/result', methods=['POST'])
+@app.route('/result', methods=['GET', 'POST'])
 def result():
     location = request.form['local'].lower()
     r = requests.get('https://api.covid19api.com/summary')
