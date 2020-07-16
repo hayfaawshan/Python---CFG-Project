@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Results </title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/main.css') }}">
+
+</head>
+<body>
+
+
+<div class="header">
+    <h1> <u> The COVID-19 Statistics Checker </u></h1> </a>
+    <h2> Country Selected: </h2>
+    <hr>
+    <div class="color-location">
+    <h2> {{ location }} </h2>
+    </div>
+</div>
+
+<div class="block-container">
+    <div class="block">
+       <h2 class="current"> The current number of <br> Total confirmed <div class="color-text"> cases </div> </h2>
+       <h2 class="number"> {{ cases }}  </h2>
+         <div class="color-block">
+            <hr>
+         </div>
+    </div>
+
+
+
+    <div class="block">
+       <h2 class="current"> The current number of <br> Total confirmed <div class="color-text"> deaths </div> </h2>
+       <h2 class="number">  {{ deaths }}  </h2>
+         <div class="color-block">
+            <hr>
+         </div>
+    </div>
+
+
+
+    <div class="block">
+       <h2 class="current"> The current number of <br> Total confirmed <div class="color-text"> recovered patients </div> </h2>
+       <h2 class="number">  {{ recovered }}  </h2>
+         <div class="color-block">
+            <hr>
+         </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
